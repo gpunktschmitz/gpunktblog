@@ -3,10 +3,6 @@
   --sk-color: #333;
 }
 
-html[data-theme='dark'] {
-  --sk-color: rgb(169, 169, 179);
-}
-
 .sk-wrapper {
   display: flex;
   justify-content: center;
