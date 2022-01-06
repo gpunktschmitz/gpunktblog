@@ -1,26 +1,29 @@
 {
-  "name": "anatole",
-  "version": "1.1.0",
-  "description": "Anatole is a beautiful minimalist two-column hugo theme based on farbox-theme-Anatole.",
+  "name": "gpunktblog",
+  "version": "0.0.1",
+  "description": "gpunktblog is the theme used for my blogs and is based on Anatole which is a beautiful minimalist two-column hugo theme based on farbox-theme-Anatole.",
   "scripts": {
     "prettier": "npx prettier --write ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lxndrblz/anatole.git"
+    "url": "git+https://github.com/gpunktschmitz/gpunktblog.git"
   },
   "keywords": [
     "theme",
     "hugo",
     "farbox",
-    "anatole"
+    "anatole",
+    "gpunktschmitz",
+    "gpunktblog",
+    "gpunkt"
   ],
-  "author": "Alexander Bilz",
+  "author": "Guenther Schmitz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lxndrblz/anatole/issues"
+    "url": "https://github.com/gpunktschmitz/gpunktblog/issues"
   },
-  "homepage": "https://github.com/lxndrblz/anatole#readme",
+  "homepage": "https://github.com/gpunktschmitz/gpunktblog#readme",
   "dependencies": {},
   "devDependencies": {
     "prettier": "~2.2.1",
