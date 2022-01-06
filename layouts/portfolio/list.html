@@ -1,15 +1,7 @@
 {{ define "main" }}
 
   {{ range $index, $elemen:= .Site.Data.portfolio.portfolioitems }}
-    <div
-      class="post {{ with .Site.Params.doNotLoadAnimations }}
-        .
-
-      {{ else }}
-        animated fadeInDown
-
-      {{ end }}"
-    >
+    <div class="post">
       <div class="post-content">
         <div class="post-title">
           <h2>{{ .title }}</h2>

@@ -1,13 +1,6 @@
 {{ define "main" }}
   <div
-    class="post {{ with .Site.Params.doNotLoadAnimations }}
-      .
-
-    {{ else }}
-      animated fadeInDown
-
-    {{ end }}"
-  >
+    class="post">
     <div class="post-title post-content">
       {{ .Content }}
     </div>
@@ -21,15 +14,7 @@
   </div>
 
   {{ if .Params.mainSectionsTitle }}
-    <div
-      class="post {{ with .Site.Params.doNotLoadAnimations }}
-        .
-
-      {{ else }}
-        animated fadeInDown
-
-      {{ end }}"
-    >
+    <div class="post">
       <div class="post-title post-content">
         <h2>{{ .Params.mainSectionsTitle }}</h2>
       </div>
@@ -39,15 +24,7 @@
 
   {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
   {{ range $paginator.Pages }}
-    <div
-      class="post {{ with .Site.Params.doNotLoadAnimations }}
-        .
-
-      {{ else }}
-        animated fadeInDown
-
-      {{ end }}"
-    >
+    <div class="post" >
       {{ if .Params.thumbnail }}
         <div class="post-thumbnail">
           <a href="{{ .RelPermalink }}">
