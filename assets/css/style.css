@@ -1,5 +1,29 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: "Noto Serif";
+  src: url("/fonts/NotoSerif-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Noto Serif";
+  src: url("/fonts/NotoSerif-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Noto Serif";
+  src: url("/fonts/NotoSerif-Italic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Noto Serif";
+  src: url("/fonts/NotoSerif-Italic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
 :root {
   --bg-color: #fff;
   --secondary-bg-color: #eeeeee;
@@ -10,7 +34,6 @@
   --form-border-color: #9f9f9f;
   --form-button-hover-border-color: #000;
   --pre-bg-color: #f9f9fd;
-  --nav-text-color: #5a5a5a;
   --tag-color: #424242;
   --blockquote-text-color: #858585;
   --blockquote-border-color: #dfe2e5;
@@ -36,7 +59,7 @@ html {
 
 body {
   color: var(--body-color);
-  font-family: 'PingHei', 'PingFang SC', 'Helvetica Neue', 'Work Sans', 'Hiragino Sans GB', sans-serif;
+  font-family: 'Noto Serif', serif;
   font-size: 1.5rem;
   width: 100%;
   margin: 0 auto;
@@ -103,165 +126,17 @@ a:active {
   color: var(--link-color);
 }
 
-nav__list {
-  margin: 0;
-}
-
 main {
   width: var(--content-width);
 }
 
 .content {
   height: auto;
-  margin-top: 80px;
-}
-
-header {
-  width: var(--content-width);
-  position: fixed;
-  right: 0;
-  z-index: 3;
-  background-color: var(--bg-color);
-}
-
-header .nav__list {
-  list-style: none;
-  padding: 20px 30px;
-  font-size: 1.2rem;
-}
-
-header .nav__list li {
-  position: relative;
-  display: initial;
-}
-
-header .nav__list a {
-  color: var(--nav-text-color);
-}
-
-header .nav__list a:hover {
-  color: #2660ab;
-}
-
-header .nav__list a.current {
-  color: var(--nav-text-color);
-  padding-bottom: 22px;
-  border-bottom: 1px solid var(--nav-text-color);
-}
-
-.theme-switch {
-  margin-top: -5px;
-  color: var(--nav-text-color);
-  font-size: 1.75rem;
-}
-
-header .information {
-  float: right;
-  padding-top: 12px;
-  padding-right: 20px;
-}
-
-header .information .avatar {
-  float: right;
-}
-
-header .information .avatar img {
-  width: 32px;
-  height: 32px;
-  border-radius: 300px;
-}
-
-header .information .back_btn {
-  float: left;
-  padding-top: 5px;
-  margin-right: -10px;
-}
-
-header .information .back_btn li {
-  display: initial;
-  padding-right: 40px;
+  margin-top: 2rem;
 }
 
 aside {
   width: var(--sidebar-width);
-}
-
-/*
-Language Switch
-*/
-
-.sl-nav {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  position: relative;
-  display: inline-block;
-  padding-right: 20px;
-}
-
-.sl-nav li label {
-  cursor: pointer;
-}
-
-.sl-nav li .dropdown {
-  display: none;
-  position: absolute;
-  top: 29px;
-  right: -15px;
-  background: var(--pre-bg-color);
-  border-color: var(--border-color);
-  padding-left: 0;
-  padding-top: 0px;
-  z-index: 1;
-  border-radius: 5px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-}
-
-#languagepicker:checked ~ .dropdown {
-  display: block;
-}
-
-.sl-nav li .dropdown li {
-  position: relative;
-  text-align: left;
-  background: transparent;
-  padding: 12px;
-  z-index: 2;
-  color: #3c3c3c;
-  display: block;
-}
-
-.sl-nav li .dropdown li span {
-  white-space: nowrap;
-}
-.sl-nav li .dropdown li span.active {
-  color: var(--tag-color);
-}
-
-#languagepicker:checked ~ .triangle {
-  position: absolute;
-  top: 15px;
-  right: -10px;
-  z-index: 10;
-  height: 14px;
-  overflow: hidden;
-  width: 30px;
-  background: transparent;
-}
-
-#languagepicker:checked ~ .triangle:after {
-  content: '';
-  display: block;
-  z-index: 20;
-  width: 15px;
-  transform: rotate(45deg) translateY(0px) translatex(10px);
-  height: 15px;
-  background: var(--pre-bg-color);
-  border-radius: 2px 0px 0px 0px;
-  border-color: var(--border-color);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  float: left;
-  display: block;
 }
 
 .sidebar {
@@ -951,10 +826,6 @@ a.btn {
   padding-top: 50px;
 }
 
-.navbar-burger {
-  display: none;
-}
-
 #TableOfContents {
   display: block;
   background: transparent;
@@ -1003,14 +874,6 @@ a.btn {
 }
 
 @media screen and (min-width: 961px), print {
-  header {
-    border-bottom: 1px solid var(--border-color);
-  }
-
-  .nav__links li:not(:last-of-type) {
-    padding-right: 20px;
-  }
-
   .sidebar {
     height: 100vh;
     display: flex;
@@ -1024,20 +887,6 @@ a.btn {
     flex-direction: column;
     justify-content: center;
     flex-grow: 1;
-  }
-
-  .navbar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .nav__list {
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 0;
   }
 
   .wrapper {
@@ -1166,73 +1015,6 @@ a.btn {
     display: grid;
   }
 
-  nav {
-    display: none;
-  }
-
-  header .nav__list {
-    background-color: var(--secondary-bg-color);
-    box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
-    padding: 0.5rem 0;
-    width: 100%;
-    margin-top: 0px;
-  }
-
-  header nav.is-active {
-    display: block;
-  }
-
-  header .nav__list li {
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 0;
-    line-height: 2.5;
-    padding: 0.5rem 0.75rem;
-    position: relative;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1.6rem;
-  }
-
-  header .nav__list ul {
-    padding: inherit;
-  }
-
-  header .nav__list a.current {
-    border-bottom: none;
-  }
-
-  .navbar-burger {
-    cursor: pointer;
-    display: block;
-    height: 3.25rem;
-    position: relative;
-    width: 3.25rem;
-    margin-left: auto;
-  }
-
-  .navbar-burger span {
-    background-color: var(--heading-color);
-    display: block;
-    height: 1px;
-    left: calc(50% - 8px);
-    position: absolute;
-    transform-origin: center;
-    width: 16px;
-  }
-
-  .navbar-burger span:nth-child(1) {
-    top: calc(50% - 6px);
-  }
-
-  .navbar-burger span:nth-child(2) {
-    top: calc(50% - 1px);
-  }
-
-  .navbar-burger span:nth-child(3) {
-    top: calc(50% + 4px);
-  }
-
   .list-with-title .listing .listing-post .post-time {
     max-width: 20%;
   }
@@ -1261,29 +1043,6 @@ a.btn {
 
   .triangle {
     display: none;
-  }
-
-  .sl-nav {
-    padding-right: inherit;
-  }
-
-  .sl-nav li .dropdown {
-    right: inherit;
-    position: relative;
-    top: inherit;
-    padding-right: 0px;
-    background: none;
-    border-color: inherit;
-    box-shadow: none;
-  }
-
-  .sl-nav li .dropdown li {
-    text-align: center;
-    padding: 0.5rem 0.75rem;
-  }
-
-  .sl-nav li .dropdown li span {
-    padding-left: initial;
   }
 }
 
