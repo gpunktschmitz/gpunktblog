@@ -5,7 +5,6 @@ author = "Jane Doe"
 description = "Call me Jane"
 profilePicture = "images/profile.jpg"
 keywords = ""
-favicon = "favicons/"
 # example ["css/custom.css"]
 customCss = []
 # example ["js/custom.js"]
