@@ -553,7 +553,7 @@ h4, h5 {
   display: inherit;
 }
 
-code, kbd, tt, var, samp, pre {
+code:not(pre.chroma>code), kbd, tt, var, samp {
   background-color: var(--bg-color);
   border: 1px solid var(--border-color);
   font-family: Inconsolata,monospace;

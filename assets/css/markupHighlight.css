@@ -71,6 +71,7 @@
   direction: ltr;
   color: var(--chr-def-color);
   background-color: var(--chr-def-bg-color);
+  border: 1px solid var(--border-color);
 }
 /* Other */
 .chroma .x {
