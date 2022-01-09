@@ -2,31 +2,31 @@
   <div class="archive">
     <ul class="list-with-title">
       {{ range .Data.Pages.GroupByDate "2006" }}
-        <div class="listing-title">{{ .Key }}</div>
-        {{ range .Pages }}
-          <ul class="listing">
-            <div class="listing-item">
-              <div class="listing-post">
-                <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
-                <div class="post-time">
-                  <span class="date"
-                    >{{ if isset .Site.Params "listdateformat" }}
-                      {{ .Date.Format .Site.Params.listDateFormat }}
+        <div class="listing-wrapper">
+          <div class="listing-title">{{ .Key }}</div>
+          {{ range .Pages }}
+            <ul class="listing">
+              <div class="listing-item">
+                <div class="listing-post">
+                  <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
+                  <div class="post-time">
+                    <span class="date"
+                      >{{ if isset .Site.Params "listdateformat" }}
+                        {{ .Date.Format .Site.Params.listDateFormat }}
 
 
-                    {{ else }}
-                      {{ .Date.Format "Jan 2" }}
+                      {{ else }}
+                        {{ .Date.Format "2006-02-01" }}
 
 
-                    {{ end }}</span
-                  >
+                      {{ end }}</span
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
-          </ul>
-
-        {{ end }}
-
+            </ul>
+          {{ end }}
+        </div>
 
       {{ end }}
     </ul>
