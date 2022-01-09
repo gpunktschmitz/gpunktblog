@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<html
-  dir="{{ .Site.Language.LanguageDirection | default "ltr" }}"
-  lang="{{- site.Language.Lang -}}"
-  data-theme="{{- .Site.Params.displayMode -}}"
->
+<html dir="ltr" lang="{{ .Site.Language.Lang }}">
   {{- partial "head.html" . -}}
   <body>
     <div class="wrapper">
@@ -21,10 +17,5 @@
 
     {{- partial "footer.html" (dict "context" . "footerClassModifier" "base") -}}
 
-    {{- if (eq .Site.Params.simpleAnalytics.enable true) -}}
-      {{- partial "analytics/simpleanalytics.html" . -}}
-
-
-    {{- end -}}
   </body>
 </html>
