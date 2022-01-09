@@ -259,6 +259,7 @@ h4, h5 {
 .post .post-title,
 .post .post-content {
   margin: 0 2rem;
+  line-height: 1.6;
 }
 
 .post .post-title a {
@@ -550,6 +551,17 @@ h4, h5 {
 
 #TableOfContents li a:hover {
   display: inherit;
+}
+
+code, kbd, tt, var, samp, pre {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  font-family: Inconsolata,monospace;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  padding: .2rem .5rem;
 }
 
 @media screen and (min-width: 1041px), print {
