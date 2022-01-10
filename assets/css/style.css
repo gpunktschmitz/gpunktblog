@@ -175,7 +175,7 @@ aside {
   margin: 0 auto;
 }
 
-.sidebar .logo-title .title img {
+.logo {
   width: 12rem;
   height: 12rem;
   border-radius: 50%;
@@ -339,7 +339,7 @@ header.post-title {
 }
 
 .info {
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 .info span {
@@ -635,13 +635,13 @@ code:not(pre.chroma>code), kbd, tt, var, samp {
     padding-top: 2rem;
   }
 
-  .sidebar .logo-title .title img {
+  .logo {
     width: 100px;
     height: 100px;
   }
 
-  .sidebar .logo-title .title h3 {
-    font-size: 2.2rem;
+  .sidebar h3.title {
+    font-size: 2.5rem;
   }
 
   header {
