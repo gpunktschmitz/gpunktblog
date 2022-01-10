@@ -436,38 +436,6 @@ h4, h5 {
   float: right;
 }
 
-.footer {
-  clear: both;
-  text-align: center;
-  font-size: 1rem;
-  margin: 0 auto;
-  bottom: 0;
-  width: 100%;
-  padding-bottom: 20px;
-  flex: 0;
-  position: relative;
-}
-
-.footer a {
-  color: #a6a6a6;
-}
-
-.footer a:hover {
-  color: #2660ab;
-}
-
-.footer__list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.footer__item:not(:first-of-type)::before {
-  content: '\00B7';
-  padding: 4px;
-}
-
 /*for archive*/
 .archive {
   width: 100%;
@@ -693,10 +661,6 @@ code:not(pre.chroma>code), kbd, tt, var, samp {
     float: unset;
     max-width: 100%;
     margin: 0;
-  }
-
-  .footer--sidebar {
-    display: none;
   }
 
   .list-with-title .listing .listing-post .post-time {
