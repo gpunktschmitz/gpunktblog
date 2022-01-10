@@ -114,7 +114,7 @@
 
   <!-- RSS -->
   {{ with .OutputFormats.Get "rss" -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+    {{ printf `<link rel="%s" type="%s" href="/feed" title="%s" />` .Rel .MediaType.Type $.Site.Title | safeHTML }}
 
 
   {{ end -}}
