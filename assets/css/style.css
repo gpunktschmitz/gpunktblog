@@ -2,24 +2,24 @@
 
 @font-face {
   font-family: "Noto Serif";
-  src: url("/fonts/NotoSerif-Regular.ttf");
+  src: url("https://cdn.gpunktschmitz.de/webfonts/NotoSerif-Regular.ttf");
 }
 
 @font-face {
   font-family: "Noto Serif";
-  src: url("/fonts/NotoSerif-Bold.ttf");
+  src: url("https://cdn.gpunktschmitz.de/webfonts/NotoSerif-Bold.ttf");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Noto Serif";
-  src: url("/fonts/NotoSerif-Italic.ttf");
+  src: url("https://cdn.gpunktschmitz.de/webfonts/NotoSerif-Italic.ttf");
   font-style: italic;
 }
 
 @font-face {
   font-family: "Noto Serif";
-  src: url("/fonts/NotoSerif-Italic.ttf");
+  src: url("https://cdn.gpunktschmitz.de/webfonts/NotoSerif-Italic.ttf");
   font-weight: bold;
   font-style: italic;
 }
@@ -256,8 +256,13 @@ h4, h5 {
   border: 1px solid var(--border-color);
 }
 
-.post .post-title,
-.post .post-content {
+header.post-title {
+  margin: 2rem 0 0 0;
+}
+
+.post-title > h1,
+.post-title > h3,
+.post-content {
   margin: 0 2rem;
   line-height: 1.6;
 }
@@ -334,7 +339,7 @@ h4, h5 {
 }
 
 .info {
-  padding: 1em;
+  padding: 1rem;
 }
 
 .info span {
