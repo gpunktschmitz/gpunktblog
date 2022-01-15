@@ -13,30 +13,11 @@
   <!-- CSS -->
   {{ $templateStyle := resources.Get "css/style.css" }}
   {{ $style := $templateStyle  | resources.ExecuteAsTemplate "css/main.css" . | resources.Minify | resources.Fingerprint }}
-  <link
-    rel="stylesheet"
-    href="{{ $style.RelPermalink }}"
-    integrity="{{ $style.Data.Integrity }}"
-    crossorigin="anonymous"
-    type="text/css"
-  />
-  {{ if eq .Site.Language.LanguageDirection "rtl" }}
-    <!-- Arabic font -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Tajawal:300,500,700&display=swap&subset=arabic"
-    />
-    {{ $templateStyle := resources.Get "css/style.rtl.css" }}
-    {{ $style := $templateStyle  | resources.ExecuteAsTemplate "css/main.rtl.css" . | resources.Minify | resources.Fingerprint }}
-    <link
-      rel="stylesheet"
-      href="{{ $style.RelPermalink }}"
-      integrity="{{ $style.Data.Integrity }}"
-      crossorigin="anonymous"
-      type="text/css"
-    />
-
-  {{ end }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" type="text/css" />
+  {{ $galleryStyle := resources.Get "css/hugo-easy-gallery.css" }}
+  {{ $style := $galleryStyle | resources.ExecuteAsTemplate "css/hugo-easy-gallery.css" . | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" type="text/css" />
+  
   {{ $markupHighlightStyle := resources.Get "css/markupHighlight.css" | resources.Minify | resources.Fingerprint }}
   <link
     rel="stylesheet"
