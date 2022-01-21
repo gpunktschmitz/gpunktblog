@@ -140,6 +140,7 @@ main {
 .content {
   height: auto;
   margin-top: 2rem;
+  max-width: var(--content-max-width);
 }
 
 aside {
@@ -550,6 +551,7 @@ code:not(pre.chroma>code), kbd, tt, var, samp {
     flex-direction: column;
     justify-content: center;
     flex-grow: 1;
+    margin-left: 30%;
   }
 
   .wrapper {
