@@ -47,38 +47,17 @@
       </div>
     </footer>
 
-    {{ if and (or (eq .Type "post") (eq .Type .Site.Params.postSectionName)) (ne .Page.Params.disableComments true) }}
-      {{- if .Site.DisqusShortname -}}
-        <div id="fb_comments_container">
-          <h2>{{ i18n "comments" }}</h2>
-          {{ template "_internal/disqus.html" . }}
+    {{ if isset .Params "comments" }}
+      <div class="comments">
+        <h4>Comments ({{ .Params.comments | len }})</h4>
+      {{ range .Params.comments }}
+        <div class="comment">
+          <div class="comment-author"><b>{{ if .url }}<a href="{{ .url }}" rel="external nofollow ugc" class="url">{{ end }} {{ .author }}{{ if .url }}</a>{{ end }}</b> on <time datetime="{{ .date }} {{ .time }}">{{ .date }}</time></div>
+          <div class="comment-content">{{ plainify .content }}</div>
         </div>
-
-      {{- end -}}
-      {{- if .Site.Params.utterances.repo -}}
-        <div id="fb_comments_container">
-          <h2>{{ i18n "comments" }}</h2>
-          {{ partial "comments/utterances.html" . }}
-        </div>
-
-      {{- end -}}
-      {{- if .Site.Params.CommentoURL -}}
-        <div id="fb_comments_container">
-          <h2>{{ i18n "comments" }}</h2>
-          {{ partial "comments/commento.html" . }}
-        </div>
-
-      {{- end -}}
-      {{- if .Site.Params.gitalk.repo -}}
-        <div id="fb_comments_container">
-          <h2>{{ i18n "comments" }}</h2>
-          {{ partial "comments/gitalk.html" . }}
-        </div>
-
-      {{- end -}}
-
-
+      {{ end }}
     {{ end }}
+
   </div>
 
 {{ end }}
