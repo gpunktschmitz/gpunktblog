@@ -544,6 +544,7 @@ code:not(pre.chroma>code), kbd, tt, var, samp {
 
 .comments {
   margin: 2rem;
+  padding: 0 4rem;
 }
 
 .comment {
@@ -762,5 +763,6 @@ h3>a:visited {
 
   .comments {
     margin: 1rem;
+    padding: 0;
   }
 }
