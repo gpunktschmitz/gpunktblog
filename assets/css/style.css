@@ -285,16 +285,9 @@ header.post-title {
   max-width: 100%;
 }
 
-.post .post-content ul {
-  line-height: 1.9em;
-  font-weight: 400;
-  font-size: 1.4rem;
-}
-
+.post .post-content ul, 
 .post .post-content ol {
   line-height: 1.9em;
-  font-weight: 400;
-  font-size: 1.4rem;
 }
 
 .post .post-footer {
