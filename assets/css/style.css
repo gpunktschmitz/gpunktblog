@@ -551,7 +551,6 @@ code:not(pre.chroma>code), kbd, tt, var, samp {
 .comment-author {
   border-left: 5px solid gray;
   font-size: 0.9em;
-  color: #6272a4;
   margin: 0;
   margin-top: 0px;
   margin-top: 2px;
