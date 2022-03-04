@@ -526,13 +526,13 @@ header.post-title {
 
 code:not(pre.chroma>code), kbd, tt, var, samp {
   background-color: var(--pre-bg-color);
-  border: 1rem solid var(--pre-bg-color);
+  border: 6px solid var(--pre-bg-color);
   font-family: Inconsolata,monospace;
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  padding: .2rem .5rem;
+  padding: 0;
   color: var(--chr-def-color)
 }
 
