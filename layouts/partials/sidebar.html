@@ -12,15 +12,18 @@
         <h3 class="author">{{ replace .Site.Params.author "\n" "<br />" | safeHTML }}</h3>
       </div>
     </div>
-    <ul class="social-links">
-      {{ range $item := .Site.Params.socialIcons }}
-        <li>
-          <a href="{{ $item.url }}" rel="me" aria-label="{{ $item.title }}" title="{{ $item.title }}">
-            <i class="{{ $item.icon }} fa-2x" aria-hidden="true"></i>
-          </a>
-        </li>
+    <div class="widget social">
+      <ul class="social-links">
+        {{ range $item := .Site.Params.socialIcons }}
+          <li>
+            <a href="{{ $item.url }}" rel="me" aria-label="{{ $item.title }}" title="{{ $item.title }}">
+              <i class="{{ $item.icon }} fa-2x" aria-hidden="true"></i>
+            </a>
+          </li>
 
-      {{ end }}
-    </ul>
+        {{ end }}
+      </ul>
+    </div>
+    {{ partial "tag-cloud.html" . }}
   </div>
 </div>

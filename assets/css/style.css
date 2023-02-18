@@ -285,7 +285,7 @@ header.post-title {
   max-width: 100%;
 }
 
-.post .post-content ul, 
+.post .post-content ul,
 .post .post-content ol {
   line-height: 1.9em;
 }
@@ -570,6 +570,27 @@ pre.chroma>code {
 h3>a:link,
 h3>a:visited {
   color: var(--heading-color);
+}
+
+div.tag-cloud {
+  display: block;
+  text-align: center;
+}
+
+.tag-cloud-tags {
+  list-style-type: none;
+  padding-inline-start: 0;
+  max-width: 50rem;
+  display: inline-block;
+}
+
+.tag-cloud-tags li {
+  display: inline-block;
+  padding-right: 1rem;
+}
+
+.tag-cloud-tags li a{
+  text-decoration: none;
 }
 
 @media screen and (min-width: 1041px), print {
